@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - IT Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="images/logo.png" alt="IT Learning Platform Logo" class="logo">
+            <span>IT Learning Platform</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="html-guide.html">HTML Guide</a>
+            <a href="flashcards.html">Karteikarten</a>
+            <a href="games.html">Spiele</a>
+            <a href="tools.html">Tools</a>
+            <a href="profile.html">Profil</a>
+            <button id="darkModeToggle" class="theme-toggle">🌙</button>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button onclick="changeLanguage('de')" class="lang-btn active">🇩🇪</button>
+        <button onclick="changeLanguage('en')" class="lang-btn">🇬🇧</button>
+        <button onclick="changeLanguage('ru')" class="lang-btn">🇷🇺</button>
+        <button onclick="changeLanguage('so')" class="lang-btn">🇸🇴</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Willkommen zurück, <span id="username">Benutzer</span>! 👋</h1>
+            <p>Entdecke unsere IT-Lernplattform</p>
+        </div>
+        <div class="progress-overview">
+            <div class="progress-card">
+                <div class="progress-icon">📚</div>
+                <div class="progress-info">
+                    <h3>Fortschritt</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                    </div>
+                    <p>65% abgeschlossen</p>
+                </div>
+            </div>
+            <div class="progress-card">
+                <div class="progress-icon">🎯</div>
+                <div class="progress-info">
+                    <h3>Ziele</h3>
+                    <p>3 von 5 erreicht</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+        <!-- Learning Areas -->
+        <section class="learning-areas">
+            <h2>Lernbereiche</h2>
+            <div class="area-grid">
+                <a href="html-guide.html" class="area-card">
+                    <div class="area-icon">🌐</div>
+                    <h3>HTML & CSS</h3>
+                    <p>Webentwicklung Grundlagen</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%"></div>
+                    </div>
+                </a>
+                <a href="sql.html" class="area-card">
+                    <div class="area-icon">💾</div>
+                    <h3>SQL</h3>
+                    <p>Datenbankabfragen</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                </a>
+                <a href="subnetting.html" class="area-card">
+                    <div class="area-icon">🌐</div>
+                    <h3>Subnetting</h3>
+                    <p>Netzwerkadressierung</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%"></div>
+                    </div>
+                </a>
+                <a href="binary.html" class="area-card">
+                    <div class="area-icon">🔢</div>
+                    <h3>Binärzahlen</h3>
+                    <p>Binäre Zahlensysteme</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                </a>
+                <a href="javascript.html" class="area-card">
+                    <div class="area-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>Interaktive Webentwicklung</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 20%"></div>
+                    </div>
+                </a>
+                <a href="networking.html" class="area-card">
+                    <div class="area-icon">🔌</div>
+                    <h3>Netzwerke</h3>
+                    <p>Netzwerkprotokolle & Sicherheit</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Interactive Tools -->
+        <section class="interactive-tools">
+            <h2>Interaktive Tools</h2>
+            <div class="tools-grid">
+                <a href="flashcards.html" class="tool-card">
+                    <div class="tool-icon">🎴</div>
+                    <h3>Karteikarten</h3>
+                    <p>Lerne mit Karteikarten</p>
+                </a>
+                <a href="games.html" class="tool-card">
+                    <div class="tool-icon">🎮</div>
+                    <h3>Lernspiele</h3>
+                    <p>Spielerisch lernen</p>
+                </a>
+                <a href="escape-room.html" class="tool-card">
+                    <div class="tool-icon">🔐</div>
+                    <h3>Escape Room</h3>
+                    <p>Löse Rätsel</p>
+                </a>
+                <a href="tools.html" class="tool-card">
+                    <div class="tool-icon">🛠️</div>
+                    <h3>Rechner</h3>
+                    <p>Hilfreiche Tools</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="recent-activity">
+            <h2>Letzte Aktivitäten</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">✅</div>
+                    <div class="activity-info">
+                        <h4>HTML Grundlagen abgeschlossen</h4>
+                        <p>Vor 2 Stunden</p>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">📝</div>
+                    <div class="activity-info">
+                        <h4>Neue Karteikarten erstellt</h4>
+                        <p>Vor 5 Stunden</p>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">🎮</div>
+                    <div class="activity-info">
+                        <h4>Escape Room Level 2</h4>
+                        <p>Vor 1 Tag</p>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">📊</div>
+                    <div class="activity-info">
+                        <h4>Fortschrittsbericht</h4>
+                        <p>Vor 2 Tagen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="quick-stats">
+            <h2>Statistiken</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-info">
+                        <h3>Lernzeit</h3>
+                        <p>12 Stunden</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-info">
+                        <h3>Erfolgsrate</h3>
+                        <p>85%</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-info">
+                        <h3>Gelernte Themen</h3>
+                        <p>8 von 12</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-info">
+                        <h3>Erfolge</h3>
+                        <p>5 erreicht</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

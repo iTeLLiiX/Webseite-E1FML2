@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="de">Karteikarten - IT Learning Platform</title>
+    <title data-lang="en">Flashcards - IT Learning Platform</title>
+    <title data-lang="ru">Карточки - IT Learning Platform</title>
+    <title data-lang="so">Cardyada - IT Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flashcards.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="flashcards-container">
+        <!-- Header -->
+        <header class="flashcards-header">
+            <h1 data-lang="de">Karteikarten</h1>
+            <h1 data-lang="en">Flashcards</h1>
+            <h1 data-lang="ru">Карточки</h1>
+            <h1 data-lang="so">Cardyada</h1>
+            <p data-lang="de">Lerne IT-Konzepte mit interaktiven Karteikarten</p>
+            <p data-lang="en">Learn IT concepts with interactive flashcards</p>
+            <p data-lang="ru">Изучайте IT-концепции с помощью интерактивных карточек</p>
+            <p data-lang="so">Baro maahmaahda IT adigoo isticmaalaya cardyada isdhexgalka ah</p>
+        </header>
+
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <button onclick="changeLanguage('de')" class="lang-btn active">
+                <img src="images/flags/de.png" alt="Deutsch">
+            </button>
+            <button onclick="changeLanguage('en')" class="lang-btn">
+                <img src="images/flags/en.png" alt="English">
+            </button>
+            <button onclick="changeLanguage('ru')" class="lang-btn">
+                <img src="images/flags/ru.png" alt="Русский">
+            </button>
+            <button onclick="changeLanguage('so')" class="lang-btn">
+                <img src="images/flags/so.png" alt="Soomaali">
+            </button>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories">
+            <h2 data-lang="de">Kategorien</h2>
+            <h2 data-lang="en">Categories</h2>
+            <h2 data-lang="ru">Категории</h2>
+            <h2 data-lang="so">Qaybaha</h2>
+            
+            <div class="category-grid">
+                <div class="category-card" onclick="selectCategory('networking')">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 data-lang="de">Netzwerke</h3>
+                    <h3 data-lang="en">Networks</h3>
+                    <h3 data-lang="ru">Сети</h3>
+                    <h3 data-lang="so">Network</h3>
+                    <p data-lang="de">Grundlagen der Netzwerktechnik</p>
+                    <p data-lang="en">Network Technology Basics</p>
+                    <p data-lang="ru">Основы сетевых технологий</p>
+                    <p data-lang="so">Aasaaska Teknoolajiyada Network</p>
+                </div>
+
+                <div class="category-card" onclick="selectCategory('programming')">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 data-lang="de">Programmierung</h3>
+                    <h3 data-lang="en">Programming</h3>
+                    <h3 data-lang="ru">Программирование</h3>
+                    <h3 data-lang="so">Programming</h3>
+                    <p data-lang="de">Grundlagen der Programmierung</p>
+                    <p data-lang="en">Programming Basics</p>
+                    <p data-lang="ru">Основы программирования</p>
+                    <p data-lang="so">Aasaaska Programming</p>
+                </div>
+
+                <div class="category-card" onclick="selectCategory('security')">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3 data-lang="de">Sicherheit</h3>
+                    <h3 data-lang="en">Security</h3>
+                    <h3 data-lang="ru">Безопасность</h3>
+                    <h3 data-lang="so">Amniga</h3>
+                    <p data-lang="de">IT-Sicherheit und Datenschutz</p>
+                    <p data-lang="en">IT Security and Data Protection</p>
+                    <p data-lang="ru">ИТ-безопасность и защита данных</p>
+                    <p data-lang="so">Amniga IT iyo Ilaalinta Xogta</p>
+                </div>
+
+                <div class="category-card" onclick="selectCategory('databases')">
+                    <div class="category-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
+                    <h3 data-lang="de">Datenbanken</h3>
+                    <h3 data-lang="en">Databases</h3>
+                    <h3 data-lang="ru">Базы данных</h3>
+                    <h3 data-lang="so">Database</h3>
+                    <p data-lang="de">Datenbankdesign und SQL</p>
+                    <p data-lang="en">Database Design and SQL</p>
+                    <p data-lang="ru">Проектирование баз данных и SQL</p>
+                    <p data-lang="so">Qaabeynta Database iyo SQL</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flashcard Interface -->
+        <div class="flashcard-interface" style="display: none;">
+            <div class="flashcard-header">
+                <h2 id="category-title"></h2>
+                <div class="flashcard-controls">
+                    <button onclick="previousCard()" class="control-btn" title="Previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button onclick="flipCard()" class="control-btn" title="Flip">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </button>
+                    <button onclick="nextCard()" class="control-btn" title="Next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="flashcard-content">
+                <div class="flashcard">
+                    <div class="flashcard-front">
+                        <h3 id="card-question"></h3>
+                    </div>
+                    <div class="flashcard-back">
+                        <h3 id="card-answer"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flashcard-progress">
+                <div class="progress-bar">
+                    <div class="progress" id="card-progress"></div>
+                </div>
+                <p data-lang="de">Fortschritt: <span id="progress-text">0%</span></p>
+                <p data-lang="en">Progress: <span id="progress-text">0%</span></p>
+                <p data-lang="ru">Прогресс: <span id="progress-text">0%</span></p>
+                <p data-lang="so">Hagaajinta: <span id="progress-text">0%</span></p>
+            </div>
+        </div>
+
+        <!-- Create Card Interface -->
+        <div class="create-card-interface" style="display: none;">
+            <div class="create-card-header">
+                <h2 data-lang="de">Neue Karteikarte erstellen</h2>
+                <h2 data-lang="en">Create New Flashcard</h2>
+                <h2 data-lang="ru">Создать новую карточку</h2>
+                <h2 data-lang="so">Samee Card Cusub</h2>
+                <button onclick="closeCreateCard()" class="close-btn">&times;</button>
+            </div>
+            <div class="create-card-content">
+                <div class="input-group">
+                    <label data-lang="de">Kategorie:</label>
+                    <label data-lang="en">Category:</label>
+                    <label data-lang="ru">Категория:</label>
+                    <label data-lang="so">Qaybaha:</label>
+                    <select id="card-category">
+                        <option value="networking" data-lang="de">Netzwerke</option>
+                        <option value="networking" data-lang="en">Networks</option>
+                        <option value="networking" data-lang="ru">Сети</option>
+                        <option value="networking" data-lang="so">Network</option>
+                        <option value="programming" data-lang="de">Programmierung</option>
+                        <option value="programming" data-lang="en">Programming</option>
+                        <option value="programming" data-lang="ru">Программирование</option>
+                        <option value="programming" data-lang="so">Programming</option>
+                        <option value="security" data-lang="de">Sicherheit</option>
+                        <option value="security" data-lang="en">Security</option>
+                        <option value="security" data-lang="ru">Безопасность</option>
+                        <option value="security" data-lang="so">Amniga</option>
+                        <option value="databases" data-lang="de">Datenbanken</option>
+                        <option value="databases" data-lang="en">Databases</option>
+                        <option value="databases" data-lang="ru">Базы данных</option>
+                        <option value="databases" data-lang="so">Database</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label data-lang="de">Frage:</label>
+                    <label data-lang="en">Question:</label>
+                    <label data-lang="ru">Вопрос:</label>
+                    <label data-lang="so">Su'aasha:</label>
+                    <textarea id="card-question-input" placeholder="Frage eingeben"></textarea>
+                </div>
+                <div class="input-group">
+                    <label data-lang="de">Antwort:</label>
+                    <label data-lang="en">Answer:</label>
+                    <label data-lang="ru">Ответ:</label>
+                    <label data-lang="so">Jawaabta:</label>
+                    <textarea id="card-answer-input" placeholder="Antwort eingeben"></textarea>
+                </div>
+                <button onclick="saveCard()" class="save-btn">
+                    <span data-lang="de">Speichern</span>
+                    <span data-lang="en">Save</span>
+                    <span data-lang="ru">Сохранить</span>
+                    <span data-lang="so">Kaydi</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation-buttons">
+            <button class="nav-btn" onclick="window.location.href='dashboard.html'">
+                <span data-lang="de">Zurück zum Dashboard</span>
+                <span data-lang="en">Back to Dashboard</span>
+                <span data-lang="ru">Вернуться на панель управления</span>
+                <span data-lang="so">Ku noqo Dashboard</span>
+            </button>
+            <button class="nav-btn" onclick="showCreateCard()">
+                <span data-lang="de">Neue Karteikarte</span>
+                <span data-lang="en">New Flashcard</span>
+                <span data-lang="ru">Новая карточка</span>
+                <span data-lang="so">Card Cusub</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="flashcards.js"></script>
+</body>
+
+</html>

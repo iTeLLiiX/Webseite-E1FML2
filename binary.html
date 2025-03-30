@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binärzahlen - IT Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="learning.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="learning-container">
+        <!-- Header -->
+        <header class="learning-header">
+            <h1>Binärzahlen</h1>
+            <p>Lerne die Grundlagen der Binärzahlen und ihre Bedeutung in der Informatik</p>
+        </header>
+
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <button onclick="changeLanguage('de')" class="lang-btn active">
+                <img src="images/flags/de.png" alt="Deutsch">
+            </button>
+            <button onclick="changeLanguage('en')" class="lang-btn">
+                <img src="images/flags/en.png" alt="English">
+            </button>
+            <button onclick="changeLanguage('ru')" class="lang-btn">
+                <img src="images/flags/ru.png" alt="Русский">
+            </button>
+            <button onclick="changeLanguage('so')" class="lang-btn">
+                <img src="images/flags/so.png" alt="Soomaali">
+            </button>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="content-sections">
+            <!-- Introduction -->
+            <section class="content-section">
+                <h2 data-lang="de">Einführung in Binärzahlen</h2>
+                <h2 data-lang="en">Introduction to Binary Numbers</h2>
+                <h2 data-lang="ru">Введение в двоичные числа</h2>
+                <h2 data-lang="so">Hordhaca Lambarada Binary</h2>
+
+                <div class="content-text">
+                    <p data-lang="de">Binärzahlen sind das Fundament der digitalen Welt. Sie bestehen nur aus den Ziffern 0 und 1, die als Bits bezeichnet werden.</p>
+                    <p data-lang="en">Binary numbers are the foundation of the digital world. They consist only of the digits 0 and 1, which are called bits.</p>
+                    <p data-lang="ru">Двоичные числа являются основой цифрового мира. Они состоят только из цифр 0 и 1, которые называются битами.</p>
+                    <p data-lang="so">Lambarada binary waa aasaaska dunida digital. Waxay ka kooban tahay kaliya xariiqyada 0 iyo 1, kaas oo la dhaho bits.</p>
+                </div>
+
+                <div class="interactive-example">
+                    <h3 data-lang="de">Beispiel: Dezimal zu Binär</h3>
+                    <h3 data-lang="en">Example: Decimal to Binary</h3>
+                    <h3 data-lang="ru">Пример: Десятичное в двоичное</h3>
+                    <h3 data-lang="so">Tusaale: Decimal ilaa Binary</h3>
+
+                    <div class="example-container">
+                        <input type="number" id="decimal-input" placeholder="Dezimalzahl eingeben">
+                        <button onclick="convertToBinary()">Konvertieren</button>
+                        <div id="binary-result"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Binary Operations -->
+            <section class="content-section">
+                <h2 data-lang="de">Binäre Operationen</h2>
+                <h2 data-lang="en">Binary Operations</h2>
+                <h2 data-lang="ru">Двоичные операции</h2>
+                <h2 data-lang="so">Hawlaha Binary</h2>
+
+                <div class="content-text">
+                    <p data-lang="de">Die grundlegenden Operationen mit Binärzahlen sind Addition, Subtraktion, Multiplikation und Division.</p>
+                    <p data-lang="en">The basic operations with binary numbers are addition, subtraction, multiplication, and division.</p>
+                    <p data-lang="ru">Основные операции с двоичными числами - это сложение, вычитание, умножение и деление.</p>
+                    <p data-lang="so">Hawlaha asaasiga ah ee lambarada binary waa kudar, ka jare, isku dhufasho iyo qeybinta.</p>
+                </div>
+
+                <div class="interactive-example">
+                    <h3 data-lang="de">Binäre Addition</h3>
+                    <h3 data-lang="en">Binary Addition</h3>
+                    <h3 data-lang="ru">Двоичное сложение</h3>
+                    <h3 data-lang="so">Kudarista Binary</h3>
+
+                    <div class="example-container">
+                        <input type="text" id="binary1" placeholder="Erste Binärzahl">
+                        <input type="text" id="binary2" placeholder="Zweite Binärzahl">
+                        <button onclick="addBinary()">Addieren</button>
+                        <div id="addition-result"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Applications -->
+            <section class="content-section">
+                <h2 data-lang="de">Anwendungen</h2>
+                <h2 data-lang="en">Applications</h2>
+                <h2 data-lang="ru">Применение</h2>
+                <h2 data-lang="so">Codsiyada</h2>
+
+                <div class="content-text">
+                    <p data-lang="de">Binärzahlen werden in der Computertechnik für die Datenspeicherung, Verarbeitung und Übertragung verwendet.</p>
+                    <p data-lang="en">Binary numbers are used in computer technology for data storage, processing, and transmission.</p>
+                    <p data-lang="ru">Двоичные числа используются в компьютерной технике для хранения, обработки и передачи данных.</p>
+                    <p data-lang="so">Lambarada binary waxaa loo isticmaalaa teknoolajiyada kombuyuutarka ee kaydinta, maareynta iyo dirista xogta.</p>
+                </div>
+
+                <div class="interactive-example">
+                    <h3 data-lang="de">ASCII-Konverter</h3>
+                    <h3 data-lang="en">ASCII Converter</h3>
+                    <h3 data-lang="ru">ASCII конвертер</h3>
+                    <h3 data-lang="so">Beddelaha ASCII</h3>
+
+                    <div class="example-container">
+                        <input type="text" id="ascii-input" placeholder="Text eingeben">
+                        <button onclick="convertToASCII()">Konvertieren</button>
+                        <div id="ascii-result"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="progress-tracker">
+            <div class="progress-bar">
+                <div class="progress" id="learning-progress"></div>
+            </div>
+            <p data-lang="de">Fortschritt: <span id="progress-text">0%</span></p>
+            <p data-lang="en">Progress: <span id="progress-text">0%</span></p>
+            <p data-lang="ru">Прогресс: <span id="progress-text">0%</span></p>
+            <p data-lang="so">Hagaajinta: <span id="progress-text">0%</span></p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation-buttons">
+            <button class="nav-btn" onclick="window.location.href='dashboard.html'">
+                <span data-lang="de">Zurück zum Dashboard</span>
+                <span data-lang="en">Back to Dashboard</span>
+                <span data-lang="ru">Вернуться на панель управления</span>
+                <span data-lang="so">Ku noqo Dashboard</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="learning.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Escape Room - IT Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="escape-room.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="escape-room-container">
+        <!-- Header -->
+        <header class="escape-room-header">
+            <h1>IT Escape Room</h1>
+            <p>Löse die Rätsel und entkomme dem Serverraum!</p>
+        </header>
+
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <button onclick="changeLanguage('de')" class="lang-btn active">
+                <img src="images/flags/de.png" alt="Deutsch">
+            </button>
+            <button onclick="changeLanguage('en')" class="lang-btn">
+                <img src="images/flags/en.png" alt="English">
+            </button>
+            <button onclick="changeLanguage('ru')" class="lang-btn">
+                <img src="images/flags/ru.png" alt="Русский">
+            </button>
+            <button onclick="changeLanguage('so')" class="lang-btn">
+                <img src="images/flags/so.png" alt="Soomaali">
+            </button>
+        </div>
+
+        <!-- Game Container -->
+        <div class="game-container">
+            <!-- Room View -->
+            <div class="room-view">
+                <div class="room-image">
+                    <img src="images/escape-room/server-room.jpg" alt="Serverraum">
+                </div>
+                <div class="interactive-elements">
+                    <!-- Clickable areas will be added dynamically -->
+                </div>
+            </div>
+
+            <!-- Inventory -->
+            <div class="inventory">
+                <h2 data-lang="de">Inventar</h2>
+                <h2 data-lang="en">Inventory</h2>
+                <h2 data-lang="ru">Инвентарь</h2>
+                <h2 data-lang="so">Qalabka</h2>
+                <div class="inventory-items">
+                    <!-- Items will be added dynamically -->
+                </div>
+            </div>
+
+            <!-- Puzzle Interface -->
+            <div class="puzzle-interface" style="display: none;">
+                <div class="puzzle-header">
+                    <h3 id="puzzle-title"></h3>
+                    <button class="close-puzzle" onclick="closePuzzle()">&times;</button>
+                </div>
+                <div class="puzzle-content">
+                    <!-- Puzzle content will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Game Log -->
+            <div class="game-log">
+                <h2 data-lang="de">Spiellog</h2>
+                <h2 data-lang="en">Game Log</h2>
+                <h2 data-lang="ru">Игровой журнал</h2>
+                <h2 data-lang="so">Diiwaan Geli</h2>
+                <div class="log-content">
+                    <!-- Log entries will be added dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer">
+            <span data-lang="de">Verbleibende Zeit:</span>
+            <span data-lang="en">Time Remaining:</span>
+            <span data-lang="ru">Оставшееся время:</span>
+            <span data-lang="so">Waqtiga:</span>
+            <span id="time-display">30:00</span>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation-buttons">
+            <button class="nav-btn" onclick="window.location.href='dashboard.html'">
+                <span data-lang="de">Zurück zum Dashboard</span>
+                <span data-lang="en">Back to Dashboard</span>
+                <span data-lang="ru">Вернуться на панель управления</span>
+                <span data-lang="so">Ku noqo Dashboard</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="escape-room.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - IT Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+
+        <div class="login-content">
+            <h1>IT Learning Platform</h1>
+            <p>Willkommen bei deiner persönlichen IT-Lernplattform</p>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Benutzername</label>
+                    <input type="text" id="username" name="username" required placeholder="Dein Benutzername">
+                </div>
+                <div class="form-group">
+                    <label for="password">Passwort</label>
+                    <input type="password" id="password" name="password" required placeholder="Dein Passwort">
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Angemeldet bleiben</label>
+                </div>
+                <button type="submit" class="login-btn">
+                    <span>Anmelden</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p>Noch kein Konto?</p>
+                <button id="showRegister" class="register-btn">
+                    <span>Registrieren</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="8.5" cy="7" r="4"/>
+                        <line x1="20" y1="8" x2="20" y2="14"/>
+                        <line x1="23" y1="11" x2="17" y2="11"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span id="closeRegister" class="close">&times;</span>
+            <h2>Registrierung</h2>
+            <form id="registerForm" class="register-form">
+                <div class="form-group">
+                    <label for="regUsername">Benutzername</label>
+                    <input type="text" id="regUsername" name="username" required placeholder="Wähle einen Benutzernamen">
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">E-Mail</label>
+                    <input type="email" id="regEmail" name="email" required placeholder="Deine E-Mail-Adresse">
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Passwort</label>
+                    <input type="password" id="regPassword" name="password" required placeholder="Wähle ein sicheres Passwort">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Passwort bestätigen</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Bestätige dein Passwort">
+                </div>
+                <button type="submit" class="register-btn">
+                    <span>Registrieren</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="8.5" cy="7" r="4"/>
+                        <line x1="20" y1="8" x2="20" y2="14"/>
+                        <line x1="23" y1="11" x2="17" y2="11"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button onclick="changeLanguage('de')" class="lang-btn active">🇩🇪</button>
+        <button onclick="changeLanguage('en')" class="lang-btn">🇬🇧</button>
+        <button onclick="changeLanguage('ru')" class="lang-btn">🇷🇺</button>
+        <button onclick="changeLanguage('so')" class="lang-btn">🇸🇴</button>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="login.js"></script>
+</body>
+</html> 
